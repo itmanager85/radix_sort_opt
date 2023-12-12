@@ -152,8 +152,8 @@
                 cs1.setStorageBuffer("bData2", bData2);
     
                 if ( !RadixHelper.bGroup1_temp || !RadixHelper.bGroup2_temp) {
-                    let bGroup1_t = createBuffer0(4);
-                    let bGroup2_t = createBuffer0(4);
+                    let bGroup1_t = createBuffer0(16);
+                    let bGroup2_t = createBuffer0(16);
     
                     RadixHelper.bGroup1_temp = bGroup1_t;
                     RadixHelper.bGroup2_temp = bGroup2_t;
@@ -312,8 +312,8 @@
                 cs2.setStorageBuffer("bData2", buffers_scan2[k]);
     
                 if ( !RadixHelper.bGroup1_temp || !RadixHelper.bGroup2_temp) {
-                    let bGroup1_t = createBuffer0(4);
-                    let bGroup2_t = createBuffer0(4);
+                    let bGroup1_t = createBuffer0(16);
+                    let bGroup2_t = createBuffer0(16);
     
                     RadixHelper.bGroup1_temp = bGroup1_t;
                     RadixHelper.bGroup2_temp = bGroup2_t;
@@ -608,4 +608,6 @@
                     console.log(`count_unmatch: ${count_unmatch}`);
                 });
             }
+
+            return endTime - startTime;
         }
